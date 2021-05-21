@@ -1,37 +1,42 @@
+//The current range is between 00-10
+let variable01=numbGenerator(); 
+let variable02=numbGenerator(); 
+let variable03=numbGenerator(); 
+//The answer will change operations depending on the question
+
+
+let question=document.getElementById('Question01');
+
 let Questions=
 {
-    Question01: "Question 1: Thomas has" +variable01 + "apples in his bag and wants to distribute them to his soccer team. He currently has " + variable02 + "players in his club. How many apples will each layer get?", 
+    Question01: "Question 1: Thomas has " +variable01 + " apples in his bag and wants to distribute them to his soccer team. He currently has " + variable02 + " players in his club. How many apples will each player get?", 
 
 };
 
 let answers={
-    answer01=14,
-    answer02=4,
-    answer03=44,
-    answer04=54,
-    answer05=64
+    answer01:14,
+    answer02:4,
+    answer03:44,
+    answer04:54,
+    answer05:64
 
 };
+function numbGenerator() {
+    return Math.floor(Math.random() * 100); 
+}
 
-//The current range is between 00-10
-let variable01=Math.floor(Math.random() * 10); 
-let variable02=Math.floor(Math.random() * 10); 
-let variable03=Math.floor(Math.random() * 10); 
 
-//The answer will change operations depending on the question
 
-let x = document.createElement("INPUT").value;
-let question=document.getElementById('Question01');
+
 
 
 
 function ShowQuestion() {
+    console.log(Questions.Question01);
+    question.innerHTML=document.createTextNode("Questions.Question01");
     
-    x.setAttribute("type", "number");
-    question=document.getElementById(Questions.Question01).style.display="inline";
-    question.appendChild(submitBtn);
     
-}
+};
 
 function Question01(answer) 
 {
